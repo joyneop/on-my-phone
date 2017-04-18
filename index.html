@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Moi</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+	<link rel="shortcut icon" href="apple-touch-icon.png">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <style>
+    html, body {
+        overflow: hidden;
+    }
+    body {
+    	font-family: -apple-system, 'SF UI Text', 'SF NS Text', Seravek, 'JAF Bernino Sans', 'Myriad Pro', Myriad, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: #111;
+        padding: 0;
+        margin: 0;
+    }
+    /*------------*/
+    .fixed {
+        position: fixed;
+    }
+    .full-width {
+        width: 100vw;
+    }
+    .full-height {
+        height: 100vh;
+    }
+    .text-center {
+        text-align: center;
+    }
+    </style>
+    <script>
+    var currentSlide = 0;
+    </script>
+</head>
+<body id="body">
+    <div id="cont">
+        <img id="the-image" class="full-width">
+    </div>
+    <script>
+    window.addEventListener('scroll', function () {
+        return false;
+    });
+	document.getElementById('the-image').src = atob(window.location.hash.slice(1))
+    </script>
+</body>
+</html>
